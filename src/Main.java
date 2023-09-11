@@ -1,7 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        // Поехали!
+        Actoins action = new Actoins();
+
+        action.actoins();
     }
 }
-
