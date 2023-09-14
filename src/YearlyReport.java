@@ -2,7 +2,6 @@ import java.util.*;
 
 public class YearlyReport {
 
-    YearlyReport yearlyReport;
     ReportEngine reportEngine = new ReportEngine();
     int yearOfReport;
     ArrayList<String> yearlyList;
@@ -42,8 +41,9 @@ public class YearlyReport {
         return true;
     }
 
+
     public void printAnnualStatistics(int yearOfReport, HashMap<Integer, Double> yearMap, ArrayList<String> yearlyList) {
-        if (!YearlyReport.checkYearReportLoaded(yearlyReport)) return;
+        if (!YearlyReport.checkYearReportLoaded(this)) return;
         System.out.println("Статистика отчёта за " + yearOfReport + " год:");
         for (int i = 1; i <= yearMap.size(); i++) {
             System.out.println("Прибыль / убыток за " + reportEngine.monthName(i) + " " + yearOfReport + " года: " + yearMap.get(i));
