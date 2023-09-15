@@ -72,7 +72,7 @@ public class MonthlyReport {
                 String[] arr = monthlyReport.monthReports.get(i).get(j).split(",");
                 if (Boolean.parseBoolean(arr[1])) {
                     if (Integer.parseInt(arr[2]) * Double.parseDouble(arr[3]) > maxExpense) {
-                        maxExpense = (Integer.parseInt(arr[2]) * Double.parseDouble(arr[3]));
+                        maxExpense = (Integer.parseInt(arr[2]) * Double.parseDouble(arr[3])); //вернул прошлую логику обратно, что то меня переклинило в последний раз
                         maxExpenseArticle = arr[0];
                     }
                 } else {
